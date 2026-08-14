@@ -1,0 +1,11 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { Github, Linkedin, Mail, Menu, X, Sun, Moon, ExternalLink, Download, Award, Code2, Cpu, Database, Phone, MapPin, Send, ArrowUp, Brain, CheckCircle2, Star, Zap, BarChart3, Layers, BookOpen, TrendingUp } from "lucide-react";
+import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell, PieChart, Pie } from "recharts";
+import { NAV_LINKS, SKILL_CATEGORIES, PROJECTS, ML_JOURNEY, DSA_ALGO_TAGS, DSA_DS_TAGS, DSA_BAR_DATA, CERTS, EXPERIENCE, ACHIEVEMENTS, TOP_LANGS, BLOGS, TESTIMONIALS, CONTRIBS, CONTRIB_COLORS, CONTRIB_COLORS_LIGHT, CODE_LINES } from "../../../data/portfolio-data.js";
+import { Reveal, SectionHeader, GradientText, Card } from "../common/PortfolioCommon.jsx";
+
+export function Testimonials() {
+  return (
+    _jsx("section", { id: "testimonials", className: "py-24 bg-white dark:bg-slate-900", children: _jsxs("div", { className: "max-w-6xl mx-auto px-6", children: [_jsx(Reveal, { children: _jsx(SectionHeader, { badge: "Social Proof", title: "Testimonials", subtitle: "What mentors, professors, and teammates say about working with me." }) }), _jsx("div", { className: "grid lg:grid-cols-3 gap-6", children: TESTIMONIALS.map((t, i) => (_jsx(Reveal, { delay: i * 100, children: _jsxs(Card, { className: "p-6 hover:-translate-y-1 transition-transform", children: [_jsx("div", { className: "flex items-center gap-1.5 mb-4", children: Array.from({ length: 5 }).map((_, i) => _jsx(Star, { className: "w-3.5 h-3.5 fill-amber-400 text-amber-400" }, i)) }), _jsxs("p", { className: "text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-5 italic", children: ["\"", t.text, "\""] }), _jsxs("div", { className: "flex items-center gap-3", children: [_jsx("div", { className: "w-10 h-10 rounded-full flex items-center justify-center text-white text-sm font-bold", style: { background: `linear-gradient(135deg, ${t.color}, ${t.color}99)` }, children: t.initials }), _jsxs("div", { children: [_jsx("p", { className: "text-sm font-semibold text-slate-900 dark:text-white", children: t.name }), _jsx("p", { className: "text-xs text-slate-500 dark:text-slate-400", children: t.role })] })] })] }) }, t.name))) })] }) })
+  );
+}
